@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="18" maxWidth="850" styleClass="card">
+    <Label text="Return a book" styleClass="section-title"/>
+    <Label text="Find a current borrowing record and complete the return." styleClass="card-label"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Enter Book ID or Member ID" styleClass="field" HBox.hgrow="ALWAYS"/>
+        <Button text="SEARCH" onAction="#search" styleClass="primary-button"/>
+    </HBox>
+
+    <GridPane hgap="18" vgap="16">
+        <Label text="Member" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="memberLabel" text="-" styleClass="info-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+        <Label text="Book" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label fx:id="bookLabel" text="-" styleClass="info-label" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Borrowed Date" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="borrowedLabel" text="-" styleClass="info-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+        <Label text="Due Date" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label fx:id="dueLabel" text="-" styleClass="info-label" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label fx:id="statusLabel" styleClass="status"/>
+    <Button text="RETURN BOOK" onAction="#returnBook" styleClass="primary-button"/>
+</VBox>

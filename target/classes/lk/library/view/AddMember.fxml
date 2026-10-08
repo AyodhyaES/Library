@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="20" maxWidth="900" styleClass="card">
+    <Label text="Register member" styleClass="section-title"/>
+    <Label text="Create a new library member profile." styleClass="card-label"/>
+
+    <GridPane hgap="18" vgap="14">
+        <columnConstraints><ColumnConstraints percentWidth="50"/><ColumnConstraints percentWidth="50"/></columnConstraints>
+
+        <Label text="Member ID" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="idField" promptText="e.g. M004" styleClass="field" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+        <Label text="Full Name" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <TextField fx:id="nameField" promptText="Full name" styleClass="field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Email" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField" promptText="name@example.com" styleClass="field" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+        <Label text="Phone Number" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <TextField fx:id="phoneField" promptText="07XXXXXXXX" styleClass="field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Address" styleClass="form-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="addressField" promptText="Residential address" styleClass="field" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    </GridPane>
+
+    <Label fx:id="statusLabel" styleClass="status"/>
+    <HBox spacing="12">
+        <Button text="REGISTER MEMBER" onAction="#register" styleClass="primary-button"/>
+        <Button text="CLEAR" onAction="#clear" styleClass="secondary-button"/>
+    </HBox>
+</VBox>

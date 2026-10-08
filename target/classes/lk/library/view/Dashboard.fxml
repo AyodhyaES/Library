@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="lk.library.controller.DashboardController">
+    <left>
+        <VBox prefWidth="220" spacing="8" styleClass="sidebar">
+            <Label text="NOVA" styleClass="sidebar-brand"/>
+            <Label text="LIBRARY MANAGEMENT" styleClass="sidebar-caption"/>
+            <Region VBox.vgrow="NEVER" prefHeight="15"/>
+            <Button text="⌂   Overview" onAction="#overview" styleClass="nav-button" maxWidth="Infinity"/>
+            <Button text="＋   Add Book" onAction="#addBook" styleClass="nav-button" maxWidth="Infinity"/>
+            <Button text="＋   Add Member" onAction="#addMember" styleClass="nav-button" maxWidth="Infinity"/>
+            <Button text="☷   Manage Members" onAction="#members" styleClass="nav-button" maxWidth="Infinity"/>
+            <Button text="↗   Issue Book" onAction="#issueBook" styleClass="nav-button" maxWidth="Infinity"/>
+            <Button text="↙   Return Book" onAction="#returnBook" styleClass="nav-button" maxWidth="Infinity"/>
+            <Button text="▤   Borrowing History" onAction="#history" styleClass="nav-button" maxWidth="Infinity"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="LOG OUT" onAction="#logout" maxWidth="Infinity" styleClass="logout-button"/>
+        </VBox>
+    </left>
+
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="topbar">
+            <Label fx:id="pageTitle" text="Overview" styleClass="page-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Librarian • Admin" styleClass="card-label"/>
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content"/>
+    </center>
+</BorderPane>

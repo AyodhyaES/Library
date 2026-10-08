@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true" hbarPolicy="NEVER">
+    <VBox maxWidth="900" spacing="20" styleClass="card">
+        <Label text="Add a new book" styleClass="section-title"/>
+        <Label text="Enter the book information below." styleClass="card-label"/>
+
+        <GridPane hgap="18" vgap="14">
+            <columnConstraints><ColumnConstraints percentWidth="50"/><ColumnConstraints percentWidth="50"/></columnConstraints>
+
+            <Label text="Book ID / ISBN" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="idField" promptText="e.g. B004" styleClass="field" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+            <Label text="Book Title" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField fx:id="titleField" promptText="Enter title" styleClass="field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Author" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="authorField" promptText="Enter author" styleClass="field" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+            <Label text="Category" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <TextField fx:id="categoryField" promptText="e.g. Fiction" styleClass="field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Published Year" styleClass="form-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="yearField" promptText="e.g. 2024" styleClass="field" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+
+            <Label text="Quantity" styleClass="form-label" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <TextField fx:id="quantityField" promptText="e.g. 10" styleClass="field" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Label fx:id="statusLabel" styleClass="status"/>
+        <HBox spacing="12">
+            <Button text="ADD BOOK" onAction="#addBook" styleClass="primary-button"/>
+            <Button text="CLEAR" onAction="#clear" styleClass="secondary-button"/>
+        </HBox>
+    </VBox>
+</ScrollPane>

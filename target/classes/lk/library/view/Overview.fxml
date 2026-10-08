@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fitToWidth="true" hbarPolicy="NEVER">
+    <VBox spacing="24">
+
+        <VBox spacing="5">
+            <Label text="Good morning, Librarian" styleClass="section-title"/>
+            <Label text="Here is today's library overview." styleClass="card-label"/>
+        </VBox>
+
+        <HBox spacing="18">
+            <VBox prefWidth="210" styleClass="card" spacing="8">
+                <Label text="BOOK COLLECTION" styleClass="card-label"/>
+                <Label text="1,248" styleClass="card-number"/>
+                <Label text="Books available" styleClass="card-label"/>
+            </VBox>
+
+            <VBox prefWidth="210" styleClass="card" spacing="8">
+                <Label text="MEMBERS" styleClass="card-label"/>
+                <Label text="326" styleClass="card-number"/>
+                <Label text="Registered readers" styleClass="card-label"/>
+            </VBox>
+
+            <VBox prefWidth="210" styleClass="card" spacing="8">
+                <Label text="BORROWED" styleClass="card-label"/>
+                <Label text="84" styleClass="card-number"/>
+                <Label text="Currently issued" styleClass="card-label"/>
+            </VBox>
+
+            <VBox prefWidth="210" styleClass="card" spacing="8">
+                <Label text="OVERDUE" styleClass="card-label"/>
+                <Label text="09" styleClass="card-number"/>
+                <Label text="Requires attention" styleClass="card-label"/>
+            </VBox>
+        </HBox>
+
+        <HBox spacing="20">
+            <VBox styleClass="card" spacing="14" HBox.hgrow="ALWAYS">
+                <Label text="Library Notes" styleClass="section-title"/>
+                <Label text="A quiet place for curious minds." styleClass="card-label"/>
+                <Label text="Use the navigation menu to manage your collection, members and borrowing activity." wrapText="true"/>
+            </VBox>
+
+            <VBox styleClass="card" spacing="14" prefWidth="300">
+                <Label text="Today" styleClass="section-title"/>
+                <Label text="12 books issued" styleClass="info-label"/>
+                <Label text="05 books returned" styleClass="info-label"/>
+                <Label text="03 new members" styleClass="info-label"/>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</ScrollPane>

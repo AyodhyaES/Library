@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="20" maxWidth="850" styleClass="card">
+    <Label text="Issue a book" styleClass="section-title"/>
+    <Label text="Create a new borrowing transaction." styleClass="card-label"/>
+
+    <VBox spacing="7">
+        <Label text="Select Member" styleClass="form-label"/>
+        <ComboBox fx:id="memberBox" promptText="Choose member" maxWidth="Infinity"/>
+    </VBox>
+
+    <VBox spacing="7">
+        <Label text="Select Book" styleClass="form-label"/>
+        <ComboBox fx:id="bookBox" promptText="Choose available book" maxWidth="Infinity"/>
+    </VBox>
+
+    <HBox spacing="20">
+        <VBox spacing="7" HBox.hgrow="ALWAYS">
+            <Label text="Issue Date" styleClass="form-label"/>
+            <DatePicker fx:id="issueDate" maxWidth="Infinity"/>
+        </VBox>
+        <VBox spacing="7" HBox.hgrow="ALWAYS">
+            <Label text="Due Date" styleClass="form-label"/>
+            <DatePicker fx:id="dueDate" maxWidth="Infinity"/>
+        </VBox>
+    </HBox>
+
+    <Label fx:id="statusLabel" styleClass="status"/>
+    <HBox spacing="12">
+        <Button text="ISSUE BOOK" onAction="#issue" styleClass="primary-button"/>
+        <Button text="CLEAR" onAction="#clear" styleClass="secondary-button"/>
+    </HBox>
+</VBox>

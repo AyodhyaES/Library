@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="16" styleClass="card">
+    <Label text="Borrowing history" styleClass="section-title"/>
+    <Label text="Track borrowed, returned, and overdue books." styleClass="card-label"/>
+
+    <TableView fx:id="historyTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="memberCol" text="Member ID" prefWidth="100"/>
+            <TableColumn fx:id="bookCol" text="Book Title" prefWidth="180"/>
+            <TableColumn fx:id="issueCol" text="Issue Date" prefWidth="120"/>
+            <TableColumn fx:id="dueCol" text="Due Date" prefWidth="120"/>
+            <TableColumn fx:id="returnCol" text="Return Date" prefWidth="120"/>
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>

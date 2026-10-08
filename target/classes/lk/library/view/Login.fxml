@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="lk.library.controller.LoginController"
+           styleClass="login-root">
+
+    <VBox maxWidth="430" spacing="18" styleClass="login-card">
+        <Label text="NOVA LIBRARY" styleClass="brand"/>
+        <Label text="Welcome back." styleClass="login-title"/>
+        <Label text="Sign in to continue to your library workspace."
+               styleClass="login-subtitle"/>
+
+        <Region prefHeight="8"/>
+
+        <VBox spacing="7">
+            <Label text="Username"/>
+            <TextField fx:id="usernameField"
+                       promptText="Enter your username"
+                       styleClass="field"/>
+        </VBox>
+
+        <VBox spacing="7">
+            <Label text="Password"/>
+            <PasswordField fx:id="passwordField"
+                           promptText="Enter your password"
+                           styleClass="field"/>
+        </VBox>
+
+        <Label fx:id="messageLabel" styleClass="status"/>
+
+        <HBox spacing="10">
+            <Button text="SIGN IN"
+                    onAction="#login"
+                    maxWidth="Infinity"
+                    HBox.hgrow="ALWAYS"
+                    styleClass="primary-button"/>
+            <Button text="RESET"
+                    onAction="#clear"
+                    maxWidth="Infinity"
+                    HBox.hgrow="ALWAYS"
+                    styleClass="secondary-button"/>
+        </HBox>
+
+        <Label text="Demo account  •  admin / admin123"
+               styleClass="login-subtitle"/>
+    </VBox>
+</StackPane>
